@@ -11,6 +11,7 @@
 
     <!-- Bootstrap JS & Popper -->
     <script src="/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/quiz.js" defer></script>
 
     <title>Primary Sources</title>
   </head>
@@ -91,6 +92,33 @@
           <hr />
         </div>
       </div>
+      <div class="position-relative">
+        <div
+          class="
+            alert alert-primary
+            d-flex
+            align-items-center
+            position-fixed
+            end-0
+            me-4
+          "
+          style="width: 15rem"
+          role="alert"
+        >
+          <div class="icon">
+            <i class="bi bi-info-circle-fill text-primary h2 me-3"></i>
+          </div>
+          <div>
+            Your Results:<br /><span class="fw-bold" id="totalScore"></span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="questions"></div>
+        </div>
+      </div>
+    </div>
     </main>
     <footer class="bg-dark text-light py-5 mt-5">
       <div class="container">
