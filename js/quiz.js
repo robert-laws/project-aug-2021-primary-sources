@@ -6,6 +6,7 @@ let quiz = [
     title: 'The Bolshevik revolution and Russian Civil War',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991011744269704111',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -15,6 +16,7 @@ let quiz = [
     title: 'The Treaty of Versailles',
     link: 'https://www.census.gov/history/pdf/treaty_of_versailles-112018.pdf',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -25,6 +27,7 @@ let quiz = [
       'Cartoon by Illingworth on the creation of an area under Soviet influence on the European continent (16 June 1947)',
     link: 'https://www.cvce.eu/en/obj/cartoon_by_illingworth_on_the_creation_of_an_area_under_soviet_influence_on_the_european_continent_16_june_1947-en-162b9b8d-5d49-4b39-b0ac-1df74c5de525.html',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -34,6 +37,7 @@ let quiz = [
     title: 'The French Revolution : a document collection',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991019254859704111',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -43,6 +47,7 @@ let quiz = [
     title: 'Bismarck: a life',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991033637219704111',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -53,6 +58,7 @@ let quiz = [
       'Brecht’s Mother Courage and Her Children (Mutter Courage und ihre Kinder)',
     link: 'https://journeys.dartmouth.edu/mothercourage/production-history/',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -62,6 +68,7 @@ let quiz = [
     title: 'Art under Socialist Realism : Soviet painting, 1930-1950',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991000942639704111',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -71,6 +78,7 @@ let quiz = [
     title: 'The ruins of the Kaiser Wilhelm Memorial Church',
     link: 'https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Memorial_Church',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -80,6 +88,7 @@ let quiz = [
     title: 'Code civil des Français (Napoleonic Code)',
     link: 'https://archive.org/details/codenapoleonorf00statgoog/page/n4/mode/2up?view=theater',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Primary Source',
   },
   {
@@ -89,6 +98,7 @@ let quiz = [
     title: 'Napoleon: conquest, reform, reorganisation',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991022795019704111',
     answers: ['Primary Source', 'Secondary Source'],
+    answerDetail: 'This is a primary source because it contains documents',
     correctAnswer: 'Secondary Source',
   },
 ];
@@ -102,65 +112,84 @@ let score = 0;
 // 5. add event listener for answer list -> 5a. click event + 5b. check if answer is correct + 5c. append answer result
 
 const questionsContainer = document.getElementById('questions');
-const nextButton = document.querySelector('#next-question-button');
+// const nextButton = document.querySelector('#next-question-button');
 
 const createHeader = (id) => {
-  // create header and text
-  const headerContainer = document.createElement('div');
+  // <h3 class="card-header bg-dark border-dark text-white">Question # 1</h3>
+  const headerContainer = document.createElement('h3');
   const headerText = document.createTextNode(`Question # ${id}`);
 
-  // question header attributes
   headerContainer.setAttribute('class', 'card-header h3');
   headerContainer.setAttribute('id', `question-${id}-header`);
 
-  // append question header text to question header
   headerContainer.appendChild(headerText);
 
-  // return question header
   return headerContainer;
 };
 
-const createQuestion = (id, question, title, link) => {
-  // create question container, paragraph, and text
-  const questionContainer = document.createElement('div');
-  const questionParagraph = document.createElement('p');
+const createQuestion = (id, question) => {
+  // <h5 class="card-title">Primary or Secondary Source?</h5>
+  const questionContainer = document.createElement('h5');
   const questionText = document.createTextNode(question);
-  const questionLink = document.createElement('a');
-  const questionLinkText = document.createTextNode(title);
 
-  // add question attributes
-  questionContainer.setAttribute('class', 'card-body');
+  questionContainer.setAttribute('class', 'card-title');
   questionContainer.setAttribute('id', `question-${id}-question`);
-  questionParagraph.setAttribute('class', 'card-text h5');
 
-  // append question text to question paragraph
-  questionParagraph.appendChild(questionText);
-  questionContainer.appendChild(questionParagraph);
-
-  // add question link attributes
-  questionLink.setAttribute('href', link);
-  questionLink.setAttribute('target', '_blank');
-  questionLink.setAttribute('class', 'card-link fw-bold');
-  questionLink.appendChild(questionLinkText);
-  questionContainer.appendChild(questionLink);
+  questionContainer.appendChild(questionText);
 
   return questionContainer;
 };
 
-const createImage = (id, image) => {
-  // create image
-  const imageContainer = document.createElement('img');
+const createQuestionLink = (title, link) => {
+  // <p class='card-text fw-bold'>
+  //   <a href='#'>Link to the relevant resources</a>
+  // </p>;
+  const questionTitleContainer = document.createElement('p');
+  const questionTitleLink = document.createElement('a');
+  const questionTitleText = document.createTextNode(title);
 
-  imageContainer.setAttribute('src', `images/${image}`);
-  imageContainer.setAttribute('alt', `${image.split('.')[0]}`);
-  imageContainer.setAttribute('class', 'img-fluid');
+  questionTitleContainer.setAttribute('class', 'card-text fw-bold');
+  questionTitleLink.setAttribute('href', link);
+  questionTitleLink.setAttribute('target', '_blank');
+
+  questionTitleLink.appendChild(questionTitleText);
+  questionTitleContainer.appendChild(questionTitleLink);
+
+  return questionTitleContainer;
+};
+
+const createImage = (id, image) => {
+  // <div class="col-md-6">
+  //   <img src="images/ghosts.png" class="img-fluid" alt="ghosts" />
+  // </div>
+  const imageContainer = document.createElement('div');
+  const imageElement = document.createElement('img');
+
+  imageContainer.setAttribute('class', 'col-md-4');
+  imageElement.setAttribute('src', `images/${image}`);
+  imageElement.setAttribute('alt', `${image.split('.')[0]}`);
+  imageElement.setAttribute('class', 'img-fluid');
+
+  imageContainer.appendChild(imageElement);
 
   return imageContainer;
 };
 
 const createAnswers = (id, answers) => {
+  //  <div>
+  //  <p class="card-text fw-bold pt-3 border-top">
+  //    Select you answer:
+  //  </p>
+  //  <div class='btn-group-vertical w-100' id='answers-group-1'>
+  //    <button class='btn btn-outline-primary'>Paris</button>
+  //    <button class='btn btn-outline-primary'>London</button>
+  //    <button class='btn btn-outline-primary'>Berlin</button>
+  //    <button class='btn btn-outline-primary'>Madrid</button>
+  //  </div>
+  // </div>
   const answersContainer = document.createElement('div');
-  const answersTitle = document.createElement('h5');
+  const answersTitle = document.createElement('p');
+  const answersTitleText = document.createTextNode('Select you answer:');
   const answersButtonsContainer = document.createElement('div');
 
   answers.forEach((answer) => {
@@ -171,18 +200,47 @@ const createAnswers = (id, answers) => {
     answersButtonsContainer.appendChild(button);
   });
 
-  answersContainer.setAttribute('class', 'card-body');
-  answersTitle.setAttribute('class', 'card-title');
+  answersTitle.setAttribute('class', 'card-text fw-bold pt-3 border-top');
   answersButtonsContainer.setAttribute('class', 'btn-group-vertical w-100');
   answersButtonsContainer.setAttribute('id', `answers-group-${id}`);
 
+  answersTitle.appendChild(answersTitleText);
   answersContainer.appendChild(answersTitle);
   answersContainer.appendChild(answersButtonsContainer);
 
   return answersContainer;
 };
 
+const createAnswerDetail = (id, answerDetail) => {
+  //  <p class='card-text pt-3 mt-4 border-top'>
+  //    This is a primary source because it contains documents.
+  //  </p>
+  const answerDetailContainer = document.createElement('div');
+  const answerDetailHeader = document.createElement('h5');
+  const answerDetailHeaderText = document.createTextNode('Answer Details:');
+  const answerDetailParagraph = document.createElement('p');
+  const answerDetailText = document.createTextNode(answerDetail);
+
+  answerDetailContainer.setAttribute(
+    'class',
+    'card-text pt-3 mt-4 border-top d-none'
+  );
+  answerDetailContainer.setAttribute('id', `answer-detail-${id}`);
+  answerDetailParagraph.setAttribute('class', 'text-dark');
+
+  answerDetailHeader.appendChild(answerDetailHeaderText);
+  answerDetailParagraph.appendChild(answerDetailText);
+  answerDetailContainer.appendChild(answerDetailHeader);
+  answerDetailContainer.appendChild(answerDetailParagraph);
+
+  return answerDetailContainer;
+};
+
 const createFooter = (id) => {
+  // <div class='card-footer'>
+  //   <h4 class='h4 d-inline-block me-1'>Result:</h4>
+  //   <p class='h4 d-inline-block' id='question-1-result'></p>
+  // </div>
   const footerContainer = document.createElement('div');
   const footerHeading = document.createElement('h4');
   const footerResult = document.createElement('p');
@@ -202,46 +260,66 @@ const createFooter = (id) => {
 const createQuestionContainer = (
   id,
   header,
-  question,
-  image,
-  answers,
+  questionContent,
+  questionLink,
+  imageContent,
+  answersDetail,
+  answersContent,
   footer
 ) => {
-  const questionContainer = document.createElement('div');
-  const questionColumn = document.createElement('div');
   const questionCard = document.createElement('div');
+  const questionRow = document.createElement('div');
+  const questionCol = document.createElement('div');
+  const questionBody = document.createElement('div');
 
-  questionContainer.setAttribute('class', 'mb-5');
-  questionContainer.setAttribute('id', `q-${id}`);
+  questionCard.setAttribute('class', 'card border mb-3');
+  questionCard.setAttribute('style', 'max-width: 100%');
+  questionCard.setAttribute('id', `q-${id}`);
 
-  questionColumn.setAttribute('class', 'col-12 d-flex justify-content-center');
-  questionCard.setAttribute('class', 'card');
-  questionCard.setAttribute('style', 'width: 30rem');
+  questionRow.setAttribute('class', 'row g-0');
+  questionCol.setAttribute('class', 'col-md-8');
+  questionBody.setAttribute('class', 'card-body');
+
+  questionBody.appendChild(questionContent);
+  questionBody.appendChild(questionLink);
+  questionBody.appendChild(answersContent);
+  questionBody.appendChild(answersDetail);
+  questionCol.appendChild(questionBody);
+
+  questionRow.appendChild(imageContent);
+  questionRow.appendChild(questionCol);
 
   questionCard.appendChild(header);
-  questionCard.appendChild(question);
-  questionCard.appendChild(image);
-  questionCard.appendChild(answers);
+  questionCard.appendChild(questionRow);
   questionCard.appendChild(footer);
 
-  questionColumn.appendChild(questionCard);
-  questionContainer.appendChild(questionColumn);
-
-  return questionContainer;
+  return questionCard;
 };
 
-const buildQuestion = (id, question, title, link, image, answers) => {
+const buildQuestion = (
+  id,
+  question,
+  title,
+  link,
+  image,
+  answers,
+  answerDetail
+) => {
   const header = createHeader(id);
-  const questionContent = createQuestion(id, question, title, link);
+  const questionContent = createQuestion(id, question);
+  const questionLink = createQuestionLink(title, link);
   const imageContent = createImage(id, image);
   const answersContent = createAnswers(id, answers);
+  const answersDetail = createAnswerDetail(id, answerDetail);
   const footer = createFooter(id);
 
   const questionContainer = createQuestionContainer(
     id,
     header,
     questionContent,
+    questionLink,
     imageContent,
+    answersDetail,
     answersContent,
     footer
   );
@@ -255,6 +333,11 @@ const updateScore = () => {
 
   const scoreContainer = document.getElementById('totalScore');
   scoreContainer.innerHTML = results;
+};
+
+const revealAnswer = (id) => {
+  const answerDetail = document.getElementById(`answer-detail-${id}`);
+  answerDetail.classList.remove('d-none');
 };
 
 const addAnswers = (id, answer) => {
@@ -279,6 +362,7 @@ const addAnswers = (id, answer) => {
       resultSpan.appendChild(resultText);
       resultElement.appendChild(resultSpan);
       score++;
+      revealAnswer(id);
       updateScore();
     } else {
       const resultElement = document.getElementById(`question-${id}-result`);
@@ -287,20 +371,31 @@ const addAnswers = (id, answer) => {
       resultSpan.setAttribute('class', 'text-danger');
       resultSpan.appendChild(resultText);
       resultElement.appendChild(resultSpan);
+      revealAnswer(id);
     }
   });
 };
 
 const buildQuiz = (quizData, addAnswersCallback) => {
   quizData.forEach(
-    ({ id, question, image, title, link, answers, correctAnswer }) => {
+    ({
+      id,
+      question,
+      image,
+      title,
+      link,
+      answers,
+      answerDetail,
+      correctAnswer,
+    }) => {
       const newQuestion = buildQuestion(
         id,
         question,
         title,
         link,
         image,
-        answers
+        answers,
+        answerDetail
       );
       questionsContainer.appendChild(newQuestion);
 
