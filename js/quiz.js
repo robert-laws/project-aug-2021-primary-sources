@@ -6,7 +6,8 @@ let quiz = [
     title: 'The Bolshevik revolution and Russian Civil War',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991011744269704111',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Bolshevik revolution and Russian Civil War.',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -16,7 +17,8 @@ let quiz = [
     title: 'The Treaty of Versailles',
     link: 'https://www.census.gov/history/pdf/treaty_of_versailles-112018.pdf',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself, in this case the end of World War I.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -27,7 +29,8 @@ let quiz = [
       'Cartoon by Illingworth on the creation of an area under Soviet influence on the European continent (16 June 1947)',
     link: 'https://www.cvce.eu/en/obj/cartoon_by_illingworth_on_the_creation_of_an_area_under_soviet_influence_on_the_european_continent_16_june_1947-en-162b9b8d-5d49-4b39-b0ac-1df74c5de525.html',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is a map that describes a historical event - the beginning of the Cold War in Europe in this case. The map contains details of historical significance. This is also a political cartoon since it makes use of drawings to make a comment about the history. Since the map/cartoon was produced at the time of the events, it is considered a primary source.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -37,7 +40,8 @@ let quiz = [
     title: 'The French Revolution : a document collection',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991019254859704111',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is a book that contains documents. The book may have an introduction written by a scholar that is written in the form of a secondary source and the editor will curate the documents, but the main contents of the book are one or more individual primary documents.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -47,7 +51,8 @@ let quiz = [
     title: 'Bismarck: a life',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991033637219704111',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a secondary source because it is a biography about a historical figure written by a historian who has consulted primary and secondary sources to create a new analysis of the life of Bismarck.',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -58,7 +63,8 @@ let quiz = [
       'Brecht’s Mother Courage and Her Children (Mutter Courage und ihre Kinder)',
     link: 'https://journeys.dartmouth.edu/mothercourage/production-history/',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is an original creative work of art. The image depicts the play "Mother Courage and Her Children" being produced by actors. The original artwork offers a creative perspective within a historical context. As a creative work, it counts as a primary source.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -68,7 +74,8 @@ let quiz = [
     title: 'Art under Socialist Realism : Soviet painting, 1930-1950',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991000942639704111',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a secondary source because it is a book that recounts the history of the art of socialist realism. The author made use of primary sources, including original creative artwork, and secondary sources to produce the book recounting the history.',
     correctAnswer: 'Secondary Source',
   },
   {
@@ -78,7 +85,8 @@ let quiz = [
     title: 'The ruins of the Kaiser Wilhelm Memorial Church',
     link: 'https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Memorial_Church',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is a building that has an architecture of historical significance. This particular building, the Kaiser Wilhelm Memorial Church, also has additional historical significance from the damage it displays as a result of bombing during World War II.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -88,7 +96,8 @@ let quiz = [
     title: 'Code civil des Français (Napoleonic Code)',
     link: 'https://archive.org/details/codenapoleonorf00statgoog/page/n4/mode/2up?view=theater',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself. Also, this primary document is in French, but primary documents can be translated into a different language and still retain their status as a primary source.',
     correctAnswer: 'Primary Source',
   },
   {
@@ -98,7 +107,8 @@ let quiz = [
     title: 'Napoleon: conquest, reform, reorganisation',
     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991022795019704111',
     answers: ['Primary Source', 'Secondary Source'],
-    answerDetail: 'This is a primary source because it contains documents',
+    answerDetail:
+      'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Napoleonic era.',
     correctAnswer: 'Secondary Source',
   },
 ];
