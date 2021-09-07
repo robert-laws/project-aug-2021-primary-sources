@@ -88,6 +88,23 @@
     <script src="/js/quiz.js" defer></script>
 
     <title>Primary Sources</title>
+
+    <style>
+      .reveal {
+        animation-duration: 0.5s;
+        animation-name: revealCard;
+      }
+
+      @keyframes revealCard {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body class="bg-white">
     <header>
@@ -104,15 +121,15 @@
             Primary Sources
           </a>
           <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div
             class="collapse navbar-collapse justify-content-end"
@@ -175,7 +192,7 @@
           <hr />
         </div>
       </div>
-      <div class="position-relative">
+      <div id="stickyScore" class="position-relative">
         <div
           class="
             shadow-sm
@@ -186,7 +203,7 @@
             end-0
             me-4
           "
-          style="width: 15rem; margin-top: -6.5rem; z-index: 2;"
+          style="width: 15rem; margin-top: -6.5rem; z-index: 2"
           role="alert"
         >
           <div class="icon">
@@ -201,8 +218,15 @@
         <div class="col-md-12">
           <div id="questions"></div>
         </div>
+        <div class="col-md-12">
+          <button
+            id="nextQuestionButton"
+            class="btn btn-primary btn-block float-end"
+          >
+            Next Question
+          </button>
+        </div>
       </div>
-    </div>
     </main>
     <footer class="bg-dark text-light py-5 mt-5">
       <div class="container">

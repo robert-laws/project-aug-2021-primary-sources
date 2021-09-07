@@ -114,6 +114,8 @@ let quiz = [
 ];
 
 let score = 0;
+let currentCard = 2;
+const nextQuestionButton = document.getElementById('nextQuestionButton');
 
 // 1. set question div as global variable
 // 2. create question container with question id
@@ -282,7 +284,7 @@ const createQuestionContainer = (
   const questionCol = document.createElement('div');
   const questionBody = document.createElement('div');
 
-  questionCard.setAttribute('class', 'card border mb-3');
+  questionCard.setAttribute('class', 'card border mb-3 d-none reveal');
   questionCard.setAttribute('style', 'max-width: 100%');
   questionCard.setAttribute('id', `q-${id}`);
 
@@ -374,6 +376,7 @@ const addAnswers = (id, answer) => {
       score++;
       revealAnswer(id);
       updateScore();
+      toggleNextButtonState();
     } else {
       const resultElement = document.getElementById(`question-${id}-result`);
       const resultSpan = document.createElement('span');
@@ -382,6 +385,7 @@ const addAnswers = (id, answer) => {
       resultSpan.appendChild(resultText);
       resultElement.appendChild(resultSpan);
       revealAnswer(id);
+      toggleNextButtonState();
     }
   });
 };
@@ -414,5 +418,41 @@ const buildQuiz = (quizData, addAnswersCallback) => {
   );
 };
 
+const toggleNextButtonState = () => {
+  nextQuestionButton.disabled === true
+    ? (nextQuestionButton.disabled = false)
+    : (nextQuestionButton.disabled = true);
+};
+
+const setCards = () => {
+  const firstQuestion = document.getElementById(`q-1`);
+  firstQuestion.classList.remove('d-none');
+
+  nextQuestionButton.disabled = true;
+};
+
+const checkFinished = () => {
+  if (currentCard - 1 > quiz.length) {
+    document.querySelector('#stickyScore').classList.add('d-none');
+    nextQuestionButton.disabled = true;
+    questionsContainer.innerHTML = `<div class='w-100 d-flex flex-column justify-content-center align-items-center' style='height: 500px'><h1>Quiz Completed!</h1><h2>Your score is ${score} out of ${quiz.length} correct</h2></div>`;
+  }
+};
+
+nextQuestionButton.addEventListener('click', () => {
+  let cards = document.querySelectorAll('.card');
+
+  cards.forEach((card) => {
+    card.attributes.id.value === `q-${currentCard}`
+      ? card.classList.remove('d-none')
+      : card.classList.add('d-none');
+  });
+
+  toggleNextButtonState();
+  currentCard++;
+  checkFinished();
+});
+
 buildQuiz(quiz, addAnswers);
 updateScore();
+setCards();
