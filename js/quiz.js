@@ -170,7 +170,7 @@ const createQuestionLink = (title, link) => {
   return questionTitleContainer;
 };
 
-const createImage = (id, image) => {
+const createImage = (image) => {
   // <div class="col-md-6">
   //   <img src="images/ghosts.png" class="img-fluid" alt="ghosts" />
   // </div>
@@ -320,7 +320,7 @@ const buildQuestion = (
   const header = createHeader(id);
   const questionContent = createQuestion(id, question);
   const questionLink = createQuestionLink(title, link);
-  const imageContent = createImage(id, image);
+  const imageContent = createImage(image);
   const answersContent = createAnswers(id, answers);
   const answersDetail = createAnswerDetail(id, answerDetail);
   const footer = createFooter(id);
@@ -392,10 +392,6 @@ const addAnswers = (id, answer, quizLength) => {
 const getQuizData = async () => {
   const response = await fetch('./js/quiz-data.json');
   const data = await response.json();
-  loadData(data);
-};
-
-const loadData = (data) => {
   buildQuiz(data, addAnswers);
 };
 
