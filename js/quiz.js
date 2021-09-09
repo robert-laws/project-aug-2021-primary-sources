@@ -1,117 +1,117 @@
-let quiz = [
-  {
-    id: 1,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-1.png',
-    title: 'The Bolshevik revolution and Russian Civil War',
-    link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991011744269704111',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Bolshevik revolution and Russian Civil War.',
-    correctAnswer: 'Secondary Source',
-  },
-  {
-    id: 2,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-2.jpg',
-    title: 'The Treaty of Versailles',
-    link: 'https://www.census.gov/history/pdf/treaty_of_versailles-112018.pdf',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself, in this case the end of World War I.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 3,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-3.png',
-    title:
-      'Cartoon by Illingworth on the creation of an area under Soviet influence on the European continent (16 June 1947)',
-    link: 'https://www.cvce.eu/en/obj/cartoon_by_illingworth_on_the_creation_of_an_area_under_soviet_influence_on_the_european_continent_16_june_1947-en-162b9b8d-5d49-4b39-b0ac-1df74c5de525.html',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is a map that describes a historical event - the beginning of the Cold War in Europe in this case. The map contains details of historical significance. This is also a political cartoon since it makes use of drawings to make a comment about the history. Since the map/cartoon was produced at the time of the events, it is considered a primary source.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 4,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-4.png',
-    title: 'The French Revolution : a document collection',
-    link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991019254859704111',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is a book that contains documents. The book may have an introduction written by a scholar that is written in the form of a secondary source and the editor will curate the documents, but the main contents of the book are one or more individual primary documents.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 5,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-5.png',
-    title: 'Bismarck: a life',
-    link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991033637219704111',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a secondary source because it is a biography about a historical figure written by a historian who has consulted primary and secondary sources to create a new analysis of the life of Bismarck.',
-    correctAnswer: 'Secondary Source',
-  },
-  {
-    id: 6,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-6.jpg',
-    title:
-      'Brecht’s Mother Courage and Her Children (Mutter Courage und ihre Kinder)',
-    link: 'https://journeys.dartmouth.edu/mothercourage/production-history/',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is an original creative work of art. The image depicts the play "Mother Courage and Her Children" being produced by actors. The original artwork offers a creative perspective within a historical context. As a creative work, it counts as a primary source.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 7,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-7.jpg',
-    title: 'Art under Socialist Realism : Soviet painting, 1930-1950',
-    link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991000942639704111',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a secondary source because it is a book that recounts the history of the art of socialist realism. The author made use of primary sources, including original creative artwork, and secondary sources to produce the book recounting the history.',
-    correctAnswer: 'Secondary Source',
-  },
-  {
-    id: 8,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-8.jpg',
-    title: 'The ruins of the Kaiser Wilhelm Memorial Church',
-    link: 'https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Memorial_Church',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is a building that has an architecture of historical significance. This particular building, the Kaiser Wilhelm Memorial Church, also has additional historical significance from the damage it displays as a result of bombing during World War II.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 9,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-9.png',
-    title: 'Code civil des Français (Napoleonic Code)',
-    link: 'https://archive.org/details/codenapoleonorf00statgoog/page/n4/mode/2up?view=theater',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself. Also, this primary document is in French, but primary documents can be translated into a different language and still retain their status as a primary source.',
-    correctAnswer: 'Primary Source',
-  },
-  {
-    id: 10,
-    question: 'Primary or Secondary Source?',
-    image: 'quiz-10.jpg',
-    title: 'Napoleon: conquest, reform, reorganisation',
-    link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991022795019704111',
-    answers: ['Primary Source', 'Secondary Source'],
-    answerDetail:
-      'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Napoleonic era.',
-    correctAnswer: 'Secondary Source',
-  },
-];
+// let quiz = [
+//   {
+//     id: 1,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-1.png',
+//     title: 'The Bolshevik revolution and Russian Civil War',
+//     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991011744269704111',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Bolshevik revolution and Russian Civil War.',
+//     correctAnswer: 'Secondary Source',
+//   },
+//   {
+//     id: 2,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-2.jpg',
+//     title: 'The Treaty of Versailles',
+//     link: 'https://www.census.gov/history/pdf/treaty_of_versailles-112018.pdf',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself, in this case the end of World War I.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 3,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-3.png',
+//     title:
+//       'Cartoon by Illingworth on the creation of an area under Soviet influence on the European continent (16 June 1947)',
+//     link: 'https://www.cvce.eu/en/obj/cartoon_by_illingworth_on_the_creation_of_an_area_under_soviet_influence_on_the_european_continent_16_june_1947-en-162b9b8d-5d49-4b39-b0ac-1df74c5de525.html',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is a map that describes a historical event - the beginning of the Cold War in Europe in this case. The map contains details of historical significance. This is also a political cartoon since it makes use of drawings to make a comment about the history. Since the map/cartoon was produced at the time of the events, it is considered a primary source.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 4,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-4.png',
+//     title: 'The French Revolution : a document collection',
+//     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991019254859704111',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is a book that contains documents. The book may have an introduction written by a scholar that is written in the form of a secondary source and the editor will curate the documents, but the main contents of the book are one or more individual primary documents.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 5,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-5.png',
+//     title: 'Bismarck: a life',
+//     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991033637219704111',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a secondary source because it is a biography about a historical figure written by a historian who has consulted primary and secondary sources to create a new analysis of the life of Bismarck.',
+//     correctAnswer: 'Secondary Source',
+//   },
+//   {
+//     id: 6,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-6.jpg',
+//     title:
+//       'Brecht’s Mother Courage and Her Children (Mutter Courage und ihre Kinder)',
+//     link: 'https://journeys.dartmouth.edu/mothercourage/production-history/',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is an original creative work of art. The image depicts the play "Mother Courage and Her Children" being produced by actors. The original artwork offers a creative perspective within a historical context. As a creative work, it counts as a primary source.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 7,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-7.jpg',
+//     title: 'Art under Socialist Realism : Soviet painting, 1930-1950',
+//     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991000942639704111',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a secondary source because it is a book that recounts the history of the art of socialist realism. The author made use of primary sources, including original creative artwork, and secondary sources to produce the book recounting the history.',
+//     correctAnswer: 'Secondary Source',
+//   },
+//   {
+//     id: 8,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-8.jpg',
+//     title: 'The ruins of the Kaiser Wilhelm Memorial Church',
+//     link: 'https://en.wikipedia.org/wiki/Kaiser_Wilhelm_Memorial_Church',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is a building that has an architecture of historical significance. This particular building, the Kaiser Wilhelm Memorial Church, also has additional historical significance from the damage it displays as a result of bombing during World War II.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 9,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-9.png',
+//     title: 'Code civil des Français (Napoleonic Code)',
+//     link: 'https://archive.org/details/codenapoleonorf00statgoog/page/n4/mode/2up?view=theater',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a primary source because it is an original document. Original documents are produced at the time of the event and are centrally relevant to the event itself. Also, this primary document is in French, but primary documents can be translated into a different language and still retain their status as a primary source.',
+//     correctAnswer: 'Primary Source',
+//   },
+//   {
+//     id: 10,
+//     question: 'Primary or Secondary Source?',
+//     image: 'quiz-10.jpg',
+//     title: 'Napoleon: conquest, reform, reorganisation',
+//     link: 'https://wrlc-gu.primo.exlibrisgroup.com/permalink/01WRLC_GUNIV/13v2bp2/alma991022795019704111',
+//     answers: ['Primary Source', 'Secondary Source'],
+//     answerDetail:
+//       'This is a secondary source because it is a book written by a historian who has consulted relevant primary and secondary sources to produce a new analysis of the historical events of the Napoleonic era.',
+//     correctAnswer: 'Secondary Source',
+//   },
+// ];
 
 let score = 0;
 let currentCard = 2;
@@ -339,9 +339,8 @@ const buildQuestion = (
   return questionContainer;
 };
 
-const updateScore = () => {
-  const totalQuestions = quiz.length;
-  const results = `${score} out of ${totalQuestions} correct`;
+const updateScore = (quizLength) => {
+  const results = `${score} out of ${quizLength} correct`;
 
   const scoreContainer = document.getElementById('totalScore');
   scoreContainer.innerHTML = results;
@@ -352,7 +351,7 @@ const revealAnswer = (id) => {
   answerDetail.classList.remove('d-none');
 };
 
-const addAnswers = (id, answer) => {
+const addAnswers = (id, answer, quizLength) => {
   let myButtons = document.querySelector(`#answers-group-${id}`);
   myButtons.addEventListener('click', function (e) {
     let target = e.target;
@@ -375,7 +374,7 @@ const addAnswers = (id, answer) => {
       resultElement.appendChild(resultSpan);
       score++;
       revealAnswer(id);
-      updateScore();
+      updateScore(quizLength);
       toggleNextButtonState();
     } else {
       const resultElement = document.getElementById(`question-${id}-result`);
@@ -390,8 +389,18 @@ const addAnswers = (id, answer) => {
   });
 };
 
-const buildQuiz = (quizData, addAnswersCallback) => {
-  quizData.forEach(
+const getQuizData = async () => {
+  const response = await fetch('./js/quiz-data.json');
+  const data = await response.json();
+  loadData(data);
+};
+
+const loadData = (data) => {
+  buildQuiz(data, addAnswers);
+};
+
+const buildQuiz = (data, addAnswersCallback) => {
+  data.forEach(
     ({
       id,
       question,
@@ -412,10 +421,12 @@ const buildQuiz = (quizData, addAnswersCallback) => {
         answerDetail
       );
       questionsContainer.appendChild(newQuestion);
-
-      addAnswersCallback(id, correctAnswer);
+      addAnswersCallback(id, correctAnswer, data.length);
     }
   );
+
+  updateScore(data.length);
+  setCards();
 };
 
 const toggleNextButtonState = () => {
@@ -431,11 +442,11 @@ const setCards = () => {
   nextQuestionButton.disabled = true;
 };
 
-const checkFinished = () => {
-  if (currentCard - 1 > quiz.length) {
+const checkFinished = (quizLength) => {
+  if (currentCard - 1 > quizLength) {
     document.querySelector('#stickyScore').classList.add('d-none');
     nextQuestionButton.disabled = true;
-    questionsContainer.innerHTML = `<div class='w-100 d-flex flex-column justify-content-center align-items-center' style='height: 500px'><h1>Quiz Completed!</h1><h2>Your score is ${score} out of ${quiz.length} correct</h2></div>`;
+    questionsContainer.innerHTML = `<div class='w-100 d-flex flex-column justify-content-center align-items-center' style='height: 500px'><h1>Quiz Completed!</h1><h2>Your score is ${score} out of ${quizLength} correct</h2></div>`;
   }
 };
 
@@ -450,9 +461,7 @@ nextQuestionButton.addEventListener('click', () => {
 
   toggleNextButtonState();
   currentCard++;
-  checkFinished();
+  checkFinished(cards.length);
 });
 
-buildQuiz(quiz, addAnswers);
-updateScore();
-setCards();
+getQuizData();
