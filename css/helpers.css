@@ -1,0 +1,16 @@
+#skip-link {
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: dodgerblue;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  top: -9999px;
+}
+
+#skip-link:focus {
+  position: relative;
+  top: 0;
+}
